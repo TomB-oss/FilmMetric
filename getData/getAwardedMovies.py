@@ -1,8 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import streamlit as st
 
-
+@st.cache_data
 def getAwardedMovies():
     url = 'https://en.wikipedia.org/wiki/List_of_Academy_Award-winning_films'
     response = requests.get(url)
@@ -16,13 +17,12 @@ def getAwardedMovies():
         if content_text_div:
             paragraphs = content_text_div.find_all('tr')
 
-            for i, paragraph in enumerate(paragraphs):
+            for i in range(len(paragraphs)):
                 if (i == 0):
                     continue
                 nominations = paragraphs[i].find_all(
                     'td')[3].text.replace('\n', '')
                 awards = paragraphs[i].find_all('td')[2].text.split(' ')[0]
-                # change awards to int
                 awards = int(awards)
                 df = pd.concat(
                     [df, pd.DataFrame({'Film': [paragraphs[i].find_all('td')[0].text],

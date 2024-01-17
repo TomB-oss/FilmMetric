@@ -1,8 +1,22 @@
-# Movies Statistics
+# FilmMetric
 
 ## Description
 
-Python script to get some stats from a movies. I am actually scrapping IMDB and Wikipedia. But I'm planning to use TMDB's API in the future.
+The goal is to build some statistics using movie data. The data are from:
+
+**Scraped**:
+
+- [Wikipedia Academy Award Winning Films](https://en.wikipedia.org/wiki/List_of_Academy_Award-winning_films)
+
+**API**:
+
+- [TMDB](https://developer.themoviedb.org/reference/intro/getting-started)
+
+**Local**:
+
+- [Kaggle Dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset?resource=download)
+
+_I scraped IMDB data but they change their class names after some time. Therefore, I decided to stop using them._
 
 ## Usage
 

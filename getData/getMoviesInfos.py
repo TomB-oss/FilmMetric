@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
-import ast
 
-
-# @st.cache_data
+@st.cache_data
 def getMoviesInfos():
     data = pd.read_csv("MoviesDataset/movies_metadata.csv", low_memory=False)
 

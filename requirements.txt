@@ -4,3 +4,4 @@ numpy==1.26.3
 beautifulsoup4==4.12.2
 python-dotenv==0.21.1
 streamlit-globe==0.2.1
+geopy==2.4.1
